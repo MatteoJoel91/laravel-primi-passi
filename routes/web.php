@@ -14,5 +14,14 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $data = [
+            "stringa"=> 'Hello World!'
+            ];
+            
+    return view('home', $data);
 });
+
+Route::get('/homepage', function () {
+    return 'Hello World!';
+});
+
